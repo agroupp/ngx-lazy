@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <base href="/dist/ngx-lazy/">
+</head>
+<body>
+  <app-ngx-lazy></app-ngx-lazy>
+  <div>
+    <input id="set-message" type="text" />
+  </div>
+  <script src="/dist/ngx-lazy/ngx-lazy.js"></script>
+  <script>
+    var app = document.querySelector('app-ngx-lazy');
+    var input = document.getElementById('set-message');
+    input.addEventListener('keyup', () => app.setAttribute('message', input.value));
+  </script>
+</body>
+</html>
